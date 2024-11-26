@@ -26,11 +26,6 @@ const REGEX_CACHE = {
 const hardcodedLanguageDetector = (text) => {
   if (!text) return 'unknown';
   
-  // 1. Check English - must contain English letters and only allowed characters
-  if (REGEX_CACHE.ENGLISH_CHARS.test(text) && REGEX_CACHE.HAS_ENGLISH_LETTER.test(text)) {
-    return 'en';
-  }
-  
   // 2. Check Vietnamese (order matters, removed chars that overlap with Spanish)
   for (const char of text) {
     if (REGEX_CACHE.SPECIAL_CHARS.get('vi').has(char)) {
@@ -80,6 +75,19 @@ const hardcodedLanguageDetector = (text) => {
     if (code >= 0x0400 && code <= 0x04FF) return 'ru';      // Russian
     if (code >= 0x0E00 && code <= 0x0E7F) return 'th';      // Thai
     if (code >= 0x0590 && code <= 0x05FF) return 'iw';      // Hebrew
+  }
+  
+  // 마지막에 영어 비중 체크
+  let englishCharCount = 0;
+  for (const char of text) {
+    if (/[A-Za-z]/.test(char)) {
+      englishCharCount++;
+    }
+  }
+  
+  // 전체 텍스트 길이의 20% 이상이 영어 알파벳인 경우
+  if (englishCharCount / text.length >= 0.2) {
+    return 'en';
   }
   
   return 'unknown';
