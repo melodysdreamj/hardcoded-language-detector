@@ -26,25 +26,25 @@ npm install hardcoded-language-detector
 ## Usage
 
 ```javascript
-const detectLanguage = require('hardcoded-language-detector');
+const hardcodedLanguageDetector = require('hardcoded-language-detector');
 
 // Basic usage
-console.log(detectLanguage('Hello World')); // 'en'
-console.log(detectLanguage('안녕하세요')); // 'ko'
-console.log(detectLanguage('こんにちは')); // 'ja'
-console.log(detectLanguage('你好')); // 'hanz'
+console.log(hardcodedLanguageDetector('Hello World')); // 'en'
+console.log(hardcodedLanguageDetector('안녕하세요')); // 'ko'
+console.log(hardcodedLanguageDetector('こんにちは')); // 'ja'
+console.log(hardcodedLanguageDetector('你好')); // 'hanz'
 
 // With special characters
-console.log(detectLanguage('¿Cómo estás?')); // 'es'
-console.log(detectLanguage('Günaydın')); // 'tr'
-console.log(detectLanguage('Xin chào')); // 'vi'
+console.log(hardcodedLanguageDetector('¿Cómo estás?')); // 'es'
+console.log(hardcodedLanguageDetector('Günaydın')); // 'tr'
+console.log(hardcodedLanguageDetector('Xin chào')); // 'vi'
 
 // With emojis
-console.log(detectLanguage('Hello 👋')); // 'en'
-console.log(detectLanguage('Hello 😊 World')); // 'en'
+console.log(hardcodedLanguageDetector('Hello 👋')); // 'en'
+console.log(hardcodedLanguageDetector('Hello 😊 World')); // 'en'
 
 // Mixed text (returns first detected language)
-console.log(detectLanguage('Hello 안녕')); // 'ko'
+console.log(hardcodedLanguageDetector('Hello 안녕')); // 'ko'
 ```
 
 ## Features

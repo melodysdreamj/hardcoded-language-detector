@@ -6,6 +6,10 @@
   "scripts": {
     "test": "node test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melodysdreamj/hardcoded-language-detector.git"
+  },
   "keywords": [
     "language",
     "detection",
@@ -13,5 +17,9 @@
     "library"
   ],
   "author": "June Lee",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/melodysdreamj/hardcoded-language-detector/issues"
+  },
+  "homepage": "https://github.com/melodysdreamj/hardcoded-language-detector#readme"
 }
