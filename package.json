@@ -1,6 +1,6 @@
 {
   "name": "hardcoded-language-detector",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NPM library for detecting the language of given text",
   "main": "index.js",
   "scripts": {
