@@ -1,6 +1,6 @@
 {
   "name": "hardcoded-language-detector",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "NPM library for detecting the language of given text",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/melodysdreamj/hardcoded-language-detector/issues"
   },
-  "homepage": "https://github.com/melodysdreamj/hardcoded-language-detector#readme"
+  "homepage": "https://github.com/melodysdreamj/hardcoded-language-detector#readme",
+  "types": "types/hardcoded-language-detector.d.ts"
 }
